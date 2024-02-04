@@ -5,13 +5,13 @@ Python is a high-level, interpreted programming language known for its ease of u
 
 ### Lesson Plan
 
-1. **[Introduction to Python](./001-Introduction%20to%20Python.md)**
-   - [Getting Started with Python](./001-Introduction%20to%20Python.md#1.%20Getting%20Started%20with%20Python)
-   - [Variables and Data Types](./001-Introduction%20to%20Python.md#2.%20Variables%20and%20Data%20Types)
-   - [Control Structures](./001-Introduction%20to%20Python.md#3.%20Control%20Structures)
-   - [Functions](./001-Introduction%20to%20Python.md#4.%20Functions)
-   - [Working with Collections](./001-Introduction%20to%20Python.md#5.%20Working%20with%20Collections)
-   - [Modules and Packages](./001-Introduction%20to%20Python.md#6.%20Modules%20and%20Packages)
+1. **[Introduction to Python]({{ site.baseurl }}/001-Introduction%20to%20Python.md)**
+   - [Getting Started with Python]({{ site.baseurl }}/001-Introduction%20to%20Python.md#1.%20Getting%20Started%20with%20Python)
+   - [Variables and Data Types]({{ site.baseurl }}/001-Introduction%20to%20Python.md#2.%20Variables%20and%20Data%20Types)
+   - [Control Structures]({{ site.baseurl }}/001-Introduction%20to%20Python.md#3.%20Control%20Structures)
+   - [Functions]({{ site.baseurl }}/001-Introduction%20to%20Python.md#4.%20Functions)
+   - [Working with Collections]({{ site.baseurl }}/001-Introduction%20to%20Python.md#5.%20Working%20with%20Collections)
+   - [Modules and Packages]({{ site.baseurl }}/001-Introduction%20to%20Python.md#6.%20Modules%20and%20Packages)
 
 2. **Basics of Python (Comming soon)**
    - Syntax and Indentation
