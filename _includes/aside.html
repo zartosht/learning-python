@@ -1,11 +1,8 @@
 <aside id="sidebar">
   <ul class="nav" class="sticky-top">
     {% for page in site.pages %}
-      {% if page.url != '/index.md' %}
-        {% assign url_parts = page.url | split: '/' %}
-        {% if url_parts.size == 3 %}
-          <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-        {% endif %}
+      {% if page.url != '/' %}
+        <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
       {% endif %}
     {% endfor %}
   </ul>
