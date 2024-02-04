@@ -15,19 +15,18 @@ $(document).ready(function () {
   document.querySelectorAll('pre > code').forEach((codeBlock) => {
     const defaultButtonValue = '<i class="bi-clipboard" style="font-size: 1.2rem; color: cornflowerblue;"></i>';
     const copiedButtonValue = '<i class="bi-clipboard-check" style="font-size: 1.2rem; color: cornflowerblue;"></i>';
-    
-    const button = document.createElement('button');
-    button.className = 'copy-btn';
-    button.innerHTML = defaultButtonValue;
 
-    const pythonScript = document.createElement('script');
-    pythonScript.type = 'text/python';
-    pythonScript.innerHTML = codeBlock.innerText;
+    const copyButton = document.createElement('button');
+    copyButton.className = 'copy-btn';
+    copyButton.innerHTML = defaultButtonValue;
 
-    codeBlock.parentNode.insertBefore(pythonScript, codeBlock);
+    const runButton = document.createElement('button');
+    runButton.className = 'run-btn';
+    runButton.innerHTML = '<i class="bi-play-circle" style="font-size: 1.2rem; color: cornflowerblue;"></i>';
 
     const pre = codeBlock.parentNode;
-    pre.parentNode.insertBefore(button, pre);
+    pre.parentNode.insertBefore(copyButton, pre);
+    pre.parentNode.insertBefore(runButton, pre);
 
     const clipboard = new ClipboardJS('.copy-btn', {
       target: function (trigger) {
@@ -36,16 +35,43 @@ $(document).ready(function () {
     });
 
     clipboard.on('success', function (e) {
-      button.innerHTML = copiedButtonValue;
+      copyButton.innerHTML = copiedButtonValue;
       e.clearSelection();
     });
 
-    button.addEventListener('click', () => {
-      setTimeout(() => button.innerHTML = defaultButtonValue, 2000);
+    copyButton.addEventListener('click', () => {
+      setTimeout(() => copyButton.innerHTML = defaultButtonValue, 2000);
+    });
+
+    runButton.addEventListener('click', () => {
+      const pythonScript = document.createElement('div');
+      pythonScript.className = 'python-script';
+      pythonScript.contentEditable = true;
+      pythonScript.innerHTML = codeBlock.innerText;
+
+      const output = document.createElement('div');
+      output.className = 'output';
+
+      const runCode = document.createElement('button');
+      runCode.className = 'run-code';
+      runCode.innerHTML = 'Run';
+      runCode.onclick = () => {
+        const output = pythonScript.innerText;
+        const result = brython({
+          debug: 1,
+          stdout: output
+        });
+
+        console.log(result);
+        output.innerHTML = result;
+      };
+
+      codeBlock.parentNode.parentNode.parentNode.appendChild(pythonScript);
+      codeBlock.parentNode.parentNode.parentNode.appendChild(output);
     });
   });
 });
 
-window.addEventListener("load", function(){
+window.addEventListener("load", function () {
   brython();
 });
