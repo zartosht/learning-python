@@ -58,10 +58,7 @@ $(document).ready(function () {
 
       const code = codeBlock.textContent;
 
-      const pythonScript = document.createElement('div');
-      pythonScript.className = 'python-script';
-      pythonScript.contentEditable = true;
-      pythonScript.innerHTML = code;
+      codeBlock.contentEditable = true;
 
       const output = document.createElement('div');
       output.className = 'output';
@@ -88,7 +85,6 @@ $(document).ready(function () {
         runCode.disabled = false;
       };
 
-      codeBlock.parentNode.parentNode.parentNode.appendChild(pythonScript);
       codeBlock.parentNode.parentNode.parentNode.appendChild(runCode);
       codeBlock.parentNode.parentNode.parentNode.appendChild(output);
     });
