@@ -21,20 +21,11 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    {% include header.html %}
-  </div>
-
   <div class="container">
+    {% include header.html %}
 
     <div class="row">
-      <aside class="col-md-4">
-        <!-- Sidebar/Index -->
-        <div id="sidebar" class="sticky-top">
-          <!-- Dynamically generate index/sidebar content based on .md files -->
-        </div>
-      </aside>
-      <main class="col-md-8">
+      <main class="col-md-8 mx-auto">
         {{ content }}
       </main>
     </div>

@@ -35,5 +35,5 @@ $(document).ready(function () {
     return false;
   });
 
-  $(".highlighter-rouge").append('<button class="code-copy-btn" onclick="copyCodeToClipboard(this)">Copy</button>');
+  // $(".highlighter-rouge").append('<button class="code-copy-btn" onclick="copyCodeToClipboard(this)">Copy</button>');
 });
