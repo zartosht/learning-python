@@ -17,12 +17,12 @@ Python is dynamically typed and garbage-collected. It supports multiple programm
 
 ##### 1- **[Getting Started with Python](001-1-Getting-Started-with-Python)**
    - **Installing Python**: How to install Python on different operating systems.
-   - **[Your First Python Program](001-1-2-Your-First-Python-Program)**: Writing and running a simple "Hello, World!" program.
-   - **[Python Syntax Basics](001-1-3-Python-Syntax-Basics)**: Basic syntax rules, indentation, and structure.
-   - **[Data Types and Structures](001-1-4-Data-Types-and-Structures)**: Exploring Python's built-in data types and structures.
-   - **[Control Flow - If Statements and Loops](001-1-5-Control-Flow-If-Statements-and-Loops)**: Controlling the flow of your program using conditional statements and loops.
-   - **[Functions in Python](001-1-6-Functions-in-Python)**: Defining and calling functions, understanding scope, and basic concepts of arguments and return values.
-   - **[Modules and Packages](001-1-7-Modules-and-Packages)**: Using Python's extensive standard library and installing third-party packages.
+   - **Your First Python Program**: Writing and running a simple "Hello, World!" program.
+   - **Python Syntax Basics**: Basic syntax rules, indentation, and structure.
+   - **Data Types and Structures**: Exploring Python's built-in data types and structures.
+   - **Control Flow - If Statements and Loops**: Controlling the flow of your program using conditional statements and loops.
+   - **Functions in Python**: Defining and calling functions, understanding scope, and basic concepts of arguments and return values.
+   - **Modules and Packages**: Using Python's extensive standard library and installing third-party packages.
 
 ##### 2. **[Variables and Data Types](001-2-Variables-and-Data-Types)**
    - **Variables**: Declaring and using variables.

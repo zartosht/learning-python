@@ -76,9 +76,13 @@ Python is a high-level, interpreted programming language known for its ease of u
    - Benefits and Drawbacks
 
 10. **[Advanced Topics](010-Advanced-Topics)**
+    - Asynchronous Programming (asyncio)
     - Decorators
+    - Metaprogramming
     - Generators and Iterators
-    - Concurrency and Parallelism
+    - Context Managers
+    - Type Hints and Static Analysis
+    - Testing and Debugging
 
 ### Additional Resources
 - [Official Python Documentation](https://docs.python.org/3/)
