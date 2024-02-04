@@ -24,15 +24,13 @@ $(document).ready(function () {
   const btn = $('#button');
   $(window).scroll(function () {
     if ($(this).scrollTop() > 50) {
-      btn.fadeIn();
+      btn.addClass('show');
     } else {
-      btn.fadeOut();
+      btn.removeClass('show');
     }
   });
-  btn.click(function () {
-    $('body,html').animate({
-      scrollTop: 0
-    }, 400);
-    return false;
+  btn.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, 400);
   });
 });
