@@ -36,8 +36,8 @@ $(document).ready(function () {
 
   document.querySelectorAll('pre > code').forEach((codeBlock) => {
     const button = document.createElement('button');
-    const defaultButtonValue = '<i class="bi-clipboard" style="font-size: 1rem; color: cornflowerblue;"></i>';
-    const copiedButtonValue = '<i class="bi-clipboard-check" style="font-size: 1rem; color: cornflowerblue;"></i>';
+    const defaultButtonValue = '<i class="bi-clipboard" style="font-size: 1.2rem; color: cornflowerblue;"></i>';
+    const copiedButtonValue = '<i class="bi-clipboard-check" style="font-size: 1.2rem; color: cornflowerblue;"></i>';
 
     button.className = 'copy-btn';
     button.innerHTML = defaultButtonValue;
