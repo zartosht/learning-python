@@ -10,55 +10,72 @@ Python is a high-level, interpreted programming language known for its ease of u
 ### Lesson Plan
 
 1. **[Introduction to Python](001-Introduction-to-Python)**
-   - [Getting Started with Python](001-Introduction-to-Python#1.%20Getting%20Started%20with%20Python)
-   - [Variables and Data Types](001-Introduction-to-Python#2.%20Variables%20and%20Data%20Types)
-   - [Control Structures](001-Introduction-to-Python#3.%20Control%20Structures)
-   - [Functions](001-Introduction-to-Python#4.%20Functions)
-   - [Working with Collections](001-Introduction-to-Python#5.%20Working%20with%20Collections)
-   - [Modules and Packages](001-Introduction-to-Python#6.%20Modules%20and%20Packages)
-
-2. **Basics of Python (Comming soon)**
-   - Syntax and Indentation
+   - Getting Started with Python
    - Variables and Data Types
-   - Operators
+   - Control Structures
+   - Functions
+   - Working with Collections
+   - Modules and Packages
 
-3. **Control Structures (Comming soon)**
+2. **Basics of Python (002-Basics-of_Python)**
+   - Python Syntax
+   - Variables and Data Types
+   - Basic Operators
+   - Control Structures
+   - Functions
+   - Modules and Packages
+
+3. **Control Structures (003-Control-Structures)**
    - Conditional Statements
    - Loops
+   - Loop Control Statements
+   - Nested Control Structures
 
-4. **Functions and Modules (Comming soon)**
-   - Defining Functions
-   - Function Arguments
-   - Importing Modules
+4. **Functions and Modules (004-Functions-and-Modules)**
+   - Defining and Calling Functions
+   - Parameters and Return Values
+   - Introduction to Modules
+   - Packages
 
-5. **Data Structures (Comming soon)**
+5. **Data Structures (005-Data-Structures)**
    - Lists
    - Tuples
    - Dictionaries
    - Sets
+   - Operations on Data Structures
 
-6. **Object-Oriented Programming in Python (Comming soon)**
+6. **Object-Oriented Programming in Python (006-Object-Oriented-Programming-in-Python)**
    - Classes and Objects
    - Inheritance
-   - Polymorphism
    - Encapsulation
+   - Polymorphism
 
-7. **Working with Files (Comming soon)**
-   - Reading from and Writing to Files
-   - Working with Paths
+7. **Working with Files (007-Working-with-Files)**
+   - Opening Files
+   - Reading Files
+   - Writing to Files
+   - Closing Files
+   - Using `with` Statement
+   - Handling File Paths
+   - Error Handling
 
-8. **Error and Exception Handling (Comming soon)**
-   - Syntax Errors vs. Exceptions
-   - Handling Exceptions
+8. **Error and Exception Handling (008-Error-and-Exception-Handling)**
+   - Types of Errors
+   - Basic Exception Handling
+   - Catching Multiple Exceptions
+   - The `else` Clause
+   - The `finally` Clause
    - Raising Exceptions
+   - Custom Exceptions
 
-9. **Libraries and Frameworks (Comming soon)**
-   - Introduction to NumPy
-   - Introduction to Pandas
-   - Introduction to Flask
-   - Introduction to Django
+9. **Libraries and Frameworks (009-Libraries-and-Frameworks)**
+   - Libraries in Python
+   - Frameworks in Python
+   - Choosing between Libraries and Frameworks
+   - Integration of Libraries and Frameworks
+   - Benefits and Drawbacks
 
-10. **Advanced Topics (Comming soon)**
+10. **Advanced Topics (010-Advanced-Topics)**
     - Decorators
     - Generators and Iterators
     - Concurrency and Parallelism

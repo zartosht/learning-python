@@ -16,33 +16,33 @@ Python is dynamically typed and garbage-collected. It supports multiple programm
 #### Chapters
 
 ##### 1- **[Getting Started with Python](001-1-Getting-Started-with-Python)**
-   - **[Installing Python](001-1-Getting-Started-with-Python#Chapter%201:%20Installing%20Python)**: How to install Python on different operating systems.
+   - **Installing Python**: How to install Python on different operating systems.
    - **[Your First Python Program](001-1-2-Your-First-Python-Program)**: Writing and running a simple "Hello, World!" program.
    - **[Python Syntax Basics](001-1-3-Python-Syntax-Basics)**: Basic syntax rules, indentation, and structure.
    - **[Data Types and Structures](001-1-4-Data-Types-and-Structures)**: Exploring Python's built-in data types and structures.
-   - **[Control Flow - If Statements and Loops](001-1-5-Control-Flow---If-Statements-and-Loops)**: Controlling the flow of your program using conditional statements and loops.
+   - **[Control Flow - If Statements and Loops](001-1-5-Control-Flow-If-Statements-and-Loops)**: Controlling the flow of your program using conditional statements and loops.
    - **[Functions in Python](001-1-6-Functions-in-Python)**: Defining and calling functions, understanding scope, and basic concepts of arguments and return values.
    - **[Modules and Packages](001-1-7-Modules-and-Packages)**: Using Python's extensive standard library and installing third-party packages.
 
 ##### 2. **[Variables and Data Types](001-2-Variables-and-Data-Types)**
-   - **[Variables](001-2-Variables-and-Data-Types#Variables)**: Declaring and using variables.
-   - **[Basic Data Types](001-2-Variables-and-Data-Types#Basic%20Data%20Types)**: Introducing strings, integers, floats, and booleans.
-   - **[Type Conversion](001-2-Variables-and-Data-Types#Type%20Conversion)**: Converting between different data types.
-   - **[Mutable vs Immutable Types](001-2-Variables-and-Data-Types#Mutable%20vs%20Immutable%20Types)**: Understanding the difference between mutable and immutable types.
+   - **Variables**: Declaring and using variables.
+   - **Basic Data Types**: Introducing strings, integers, floats, and booleans.
+   - **Type Conversion**: Converting between different data types.
+   - **Mutable vs Immutable Types**: Understanding the difference between mutable and immutable types.
 
 ##### 3. **[Control Structures](001-3-Control-Structures)**
-   - **[Conditional Statements](001-3-Control-Structures#Conditional%20Statements%20(`if`,%20`elif`,%20`else`))**: Using `if`, `elif`, and `else` to make decisions.
-   - **[Loops](001-3-Control-Structures#Loops)**: Iterating with `for` and `while` loops.
-   - **[Loop Control Statements](001-3-Control-Structures#Loop%20Control%20Statements)**: `break`, `continue`, and `pass`.
-   - **[Comprehension Expressions](001-3-Control-Structures#Comprehension%20Expressions)**: Creating lists, dictionaries, and sets using comprehensions.
+   - **Conditional Statements**: Using `if`, `elif`, and `else` to make decisions.
+   - **Loops**: Iterating with `for` and `while` loops.
+   - **Loop Control Statements**: `break`, `continue`, and `pass`.
+   - **Comprehension Expressions**: Creating lists, dictionaries, and sets using comprehensions.
 
 ##### 4. **[Functions](001-4-Functions)**
-   - **[Defining Functions](001-4-Functions#Defining%20Functions)**: Creating your own functions with `def`.
-   - **[Calling a Function](001-4-Functions#Calling%20a%20Function)**: Invoking functions with and without arguments.
-   - **[Return Values](001-4-Functions#Return%20Values)**: Using the `return` statement to send data back from a function.
-   - **[Default Parameter Values](001-4-Functions#Default%20Parameter%20Values)**: Specifying default values for function parameters.
-   - **[Keyword Arguments](001-4-Functions#Keyword%20Arguments)**: Passing arguments by keyword, not position.
-   - **[Arbitary Number of Arguments](001-4-Functions#Arbitrary%20Number%20of%20Arguments)**: Using `*args` and `**kwargs` to handle any number of arguments.
+   - **Defining Functions**: Creating your own functions with `def`.
+   - **Calling a Function**: Invoking functions with and without arguments.
+   - **Return Values**: Using the `return` statement to send data back from a function.
+   - **Default Parameter Values**: Specifying default values for function parameters.
+   - **Keyword Arguments**: Passing arguments by keyword, not position.
+   - **Arbitary Number of Arguments**: Using `*args` and `**kwargs` to handle any number of arguments.
 
 ##### 5. **[Working with Collections](001-5-Working-with-Collections)**
    - **Lists**: Creating and manipulating lists.
