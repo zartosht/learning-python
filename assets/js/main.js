@@ -74,6 +74,7 @@ $(document).ready(function () {
 
       // disable the run button
       e.target.disabled = true;
+      const code = e.target.previousElementSibling.textContent;
       codeBlock.parentElement.contentEditable = true;
 
 
@@ -89,7 +90,6 @@ $(document).ready(function () {
           # Capture print statements
           sys.stdout = io.StringIO()
         `);
-        const code = e.target.previousElementSibling.textContent;
         const result = await pyodide.runPythonAsync(code);
         // Get printed statements
         const printedOutput = await pyodide.runPythonAsync('sys.stdout.getvalue()');
