@@ -3,7 +3,7 @@ title: Object-Oriented Programming in Python
 permalink: 006-Object-Oriented-Programming-in-Python
 ---
 
-# Lesson: Object-Oriented Programming in Python
+# Object-Oriented Programming in Python
 
 ## Overview
 This lesson introduces Object-Oriented Programming (OOP) in Python, a programming paradigm that uses objects and classes to organize and structure code. You'll learn about the key concepts of OOP, including classes, objects, inheritance, encapsulation, and polymorphism.

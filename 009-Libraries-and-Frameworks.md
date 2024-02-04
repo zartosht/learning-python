@@ -3,7 +3,7 @@ title: Libraries and Frameworks in Python
 permalink: 009-Libraries-and-Frameworks
 ---
 
-# Lesson: Libraries and Frameworks in Python
+# Libraries and Frameworks in Python
 
 ## Overview
 This lesson introduces the concepts of libraries and frameworks in Python, highlighting their roles in simplifying development by providing reusable code for common tasks. Understanding how to leverage these tools is essential for efficient programming and rapid application development.

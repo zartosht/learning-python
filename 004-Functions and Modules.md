@@ -3,7 +3,7 @@ title: Functions and Modules in Python
 permalink: 004-Functions-and-Modules
 ---
 
-# Lesson: Functions and Modules in Python
+# Functions and Modules in Python
 
 ## Overview
 This lesson introduces functions and modules in Python, essential tools for organizing and reusing code. Functions allow you to encapsulate and reuse code blocks, while modules enable you to organize functions, variables, and classes into separate files for better code management.

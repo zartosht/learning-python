@@ -3,7 +3,7 @@ title: Working with Files in Python
 permalink: 007-Working-with-Files
 ---
 
-# Lesson: Working with Files in Python
+# Working with Files in Python
 
 ## Overview
 This lesson introduces the basics of file handling in Python. You'll learn how to read from, write to, and manage files, which is crucial for any program that needs to store or retrieve data.

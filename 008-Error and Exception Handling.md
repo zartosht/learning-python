@@ -3,7 +3,7 @@ title: Error and Exception Handling in Python
 permalink: 008-Error-and-Exception-Handling
 ---
 
-# Lesson: Error and Exception Handling in Python
+# Error and Exception Handling in Python
 
 ## Overview
 This lesson focuses on understanding and implementing error and exception handling in Python. Effective error handling is crucial for building robust and fault-tolerant applications.

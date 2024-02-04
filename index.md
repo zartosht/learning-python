@@ -17,7 +17,7 @@ Python is a high-level, interpreted programming language known for its ease of u
    - Working with Collections
    - Modules and Packages
 
-2. **[Basics of Python](002-Basics-of_Python)**
+2. **[Basics of Python](002-Basics-of-Python)**
    - Python Syntax
    - Variables and Data Types
    - Basic Operators

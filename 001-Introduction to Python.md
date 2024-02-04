@@ -3,7 +3,7 @@ title: Introduction to Python
 permalink: 001-Introduction-to-Python
 ---
 
-### Lesson: Introduction to Python
+### Introduction to Python
 
 #### Overview
 This lesson provides a comprehensive introduction to Python, a versatile and widely-used programming language. You'll learn about its syntax, key features, and how to write your first Python program. By the end of this lesson, you'll have a solid understanding of Python basics and be ready to explore more complex programming concepts.

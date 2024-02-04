@@ -3,7 +3,7 @@ title: Control Structures in Python
 permalink: 003-Control-Structures
 ---
 
-# Lesson: Control Structures in Python
+# Control Structures in Python
 
 ## Overview
 This lesson delves into the control structures in Python, which are crucial for directing the flow of a program. By the end of this lesson, you'll understand the different types of control structures including conditional statements, loops, and branching mechanisms that Python uses to execute code conditionally, repeatedly, or iteratively.

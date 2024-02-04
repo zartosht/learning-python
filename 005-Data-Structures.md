@@ -3,7 +3,7 @@ title: Data Structures in Python
 permalink: 005-Data-Structures
 ---
 
-# Lesson: Data Structures in Python
+# Data Structures in Python
 
 ## Overview
 In this lesson, we delve into Python's core data structures: lists, tuples, dictionaries, and sets. Understanding these data structures is crucial for effectively managing and manipulating data in Python programs.

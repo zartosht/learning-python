@@ -3,7 +3,7 @@ title: Basics of Python
 permalink: 002-Basics-of-Python
 ---
 
-# Lesson: Basics of Python
+# Basics of Python
 
 ## Overview
 This lesson provides an introduction to the basics of Python programming, including its syntax, data types, variables, basic operations, and control structures. Python is known for its readability and simplicity, making it an excellent choice for beginners and experienced developers alike.
