@@ -41,12 +41,10 @@ $(document).ready(function () {
 
     clipboard.on('success', function (e) {
       copyButton.innerHTML = copiedButtonValue;
-      console.log('Copied!');
       e.clearSelection();
     });
 
     copyButton.addEventListener('click', () => {
-      console.log('clicked');
       setTimeout(() => copyButton.innerHTML = defaultButtonValue, 2000);
     });
 
