@@ -58,7 +58,7 @@ $(document).ready(function () {
 
       const code = codeBlock.textContent;
 
-      codeBlock.contentEditable = true;
+      codeBlock.parentElement.contentEditable = true;
 
       const output = document.createElement('div');
       output.className = 'output';
