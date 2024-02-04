@@ -1,5 +1,4 @@
 ---
-layout: custom
 title: Learn Python
 ---
 
