@@ -50,22 +50,34 @@ $(document).ready(function () {
 
     runButton.addEventListener('click', (e) => {
       e.preventDefault();
+
+      let output;
+      let runCode;
+
       // prevent double creation of python script and output
-      if (codeBlock.parentNode.parentNode.parentNode.querySelector('.python-script')) return;
+      if (!codeBlock.parentNode.parentNode.parentNode.querySelector('.run-code')) {
+        output = document.createElement('div');
+        output.className = 'output';
+
+        runCode = document.createElement('button');
+        runCode.className = 'run-code btn btn-primary my-2';
+        runCode.innerHTML = 'Run Code';
+
+        codeBlock.parentNode.parentNode.parentNode.appendChild(runCode);
+        codeBlock.parentNode.parentNode.parentNode.appendChild(output);
+      } else {
+        output = codeBlock.parentNode.parentNode.parentNode.querySelector('.output');
+        runCode = codeBlock.parentNode.parentNode.parentNode.querySelector('.run-code');
+      }
+
+      if(!runCode || !output) return;
 
       // disable the run button
       e.target.disabled = true;
-
       const code = codeBlock.textContent;
-
       codeBlock.parentElement.contentEditable = true;
 
-      const output = document.createElement('div');
-      output.className = 'output';
 
-      const runCode = document.createElement('button');
-      runCode.className = 'run-code btn btn-primary my-2';
-      runCode.innerHTML = 'Run Code';
       runCode.onclick = async (e) => {
         e.preventDefault();
         output.innerHTML = 'Loading...';
@@ -84,9 +96,6 @@ $(document).ready(function () {
         output.innerHTML = printedOutput || result; // Display printed output or the result of the last expression
         runCode.disabled = false;
       };
-
-      codeBlock.parentNode.parentNode.parentNode.appendChild(runCode);
-      codeBlock.parentNode.parentNode.parentNode.appendChild(output);
     });
   });
 });
