@@ -92,29 +92,23 @@ div
   &.highlight
     position: relative
 
-.copy-btn
+.copy-btn, .run-btn
+  background: none
+  color: white
+  border: none
+  cursor: pointer
+  margin: 2px
+
+  &:hover
+    color: #FF9800
+
+.buttons-container
   position: absolute
+  display: flex
   top: 10px
   right: 10px
-  background: none
-  color: white
-  border: none
-  cursor: pointer
-
-  &:hover
-    color: #FF9800
-
-.run-btn
-  position: absolute
-  top: 10px
-  right: 30px
-  background: none
-  color: white
-  border: none
-  cursor: pointer
-
-  &:hover
-    color: #FF9800
+  flex-wrap: nowrap
+  justify-content: space-between
 
 code
   &.language-plaintext

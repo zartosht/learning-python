@@ -13,6 +13,9 @@ $(document).ready(function () {
   });
 
   document.querySelectorAll('pre > code').forEach((codeBlock) => {
+    const buttonsContainer = document.createElement('div');
+    buttonsContainer.className = 'buttons-container';
+
     const defaultButtonValue = '<i class="bi-clipboard" style="font-size: 1.2rem; color: cornflowerblue;"></i>';
     const copiedButtonValue = '<i class="bi-clipboard-check" style="font-size: 1.2rem; color: cornflowerblue;"></i>';
 
@@ -24,9 +27,11 @@ $(document).ready(function () {
     runButton.className = 'run-btn';
     runButton.innerHTML = '<i class="bi-play-circle" style="font-size: 1.2rem; color: cornflowerblue;"></i>';
 
+    buttonsContainer.appendChild(copyButton);
+    buttonsContainer.appendChild(runButton);
+
     const pre = codeBlock.parentNode;
-    pre.parentNode.insertBefore(copyButton, pre);
-    pre.parentNode.insertBefore(runButton, pre);
+    pre.parentNode.insertBefore(buttonsContainer, pre);
 
     const clipboard = new ClipboardJS('.copy-btn', {
       target: function (trigger) {
@@ -67,6 +72,7 @@ $(document).ready(function () {
       };
 
       codeBlock.parentNode.parentNode.parentNode.appendChild(pythonScript);
+      codeBlock.parentNode.parentNode.parentNode.appendChild(runCode);
       codeBlock.parentNode.parentNode.parentNode.appendChild(output);
     });
   });
