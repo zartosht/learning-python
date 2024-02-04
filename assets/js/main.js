@@ -88,7 +88,6 @@ $(document).ready(function () {
           # Capture print statements
           sys.stdout = io.StringIO()
         `);
-        console.log(e.target);
         const code = e.target.parentElement.querySelector('pre > code').textContent;
         const result = await pyodide.runPythonAsync(code);
         // Get printed statements

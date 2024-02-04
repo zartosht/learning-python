@@ -1,6 +1,12 @@
-<aside class="col-md-4">
-  <!-- Sidebar/Index -->
-  <div id="sidebar" class="sticky-top">
-    <!-- Dynamically generate index/sidebar content based on .md files -->
-  </div>
+<aside id="sidebar">
+  <ul class="nav" class="sticky-top">
+    {% for page in site.pages %}
+      {% if page.url contains '.md' and page.url != '/index.md' %}
+        {% assign url_parts = page.url | split: '/' %}
+        {% if url_parts.size == 3 %}
+          <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
 </aside>
