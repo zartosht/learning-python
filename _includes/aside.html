@@ -11,9 +11,9 @@
 
     {% if level contains '.' %}
     {% comment %}This is a subpage{% endcomment %}
-    <ul class="sub-nav">
+    <!-- <ul class="sub-nav">
       <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-    </ul>
+    </ul> -->
     {% else %}
     <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
     {% endif %}
