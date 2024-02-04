@@ -14,4 +14,4 @@ kramdown:
   syntax_highlighter: rouge
   input: GFM
   auto_ids: true
-markdown:    kramdown
+markdown: kramdown
