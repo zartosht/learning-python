@@ -4,7 +4,7 @@
 <aside id="sidebar" class="sticky-top">
   <ul class="sidebar-nav">
     {% for page in sorted_pages %}
-    {% if page.title != '' and page.url != '/Privacy-Policy/' %}
+    {% if page.title != '' and page.url != 'https://python.zartosht.dev/Privacy-Policy' %}
     {% comment %}Extract the hierarchy from the URL{% endcomment %}
     {% assign parts = page.url | remove: '/' | split: '-' %}
     {% assign level = parts[0] %}
