@@ -23,12 +23,12 @@ $(document).ready(function () {
     copyButton.className = 'copy-btn';
     copyButton.innerHTML = defaultButtonValue;
 
-    // const runButton = document.createElement('button');
-    // runButton.className = 'run-btn';
-    // runButton.innerHTML = '<i class="bi-play-circle" style="font-size: 1.2rem; color: cornflowerblue;"></i>';
+    const runButton = document.createElement('button');
+    runButton.className = 'run-btn';
+    runButton.innerHTML = '<i class="bi-play-circle" style="font-size: 1.2rem; color: cornflowerblue;"></i>';
 
     buttonsContainer.appendChild(copyButton);
-    // buttonsContainer.appendChild(runButton);
+    buttonsContainer.appendChild(runButton);
 
     const pre = codeBlock.parentNode;
     pre.parentNode.insertBefore(buttonsContainer, pre);
@@ -48,36 +48,28 @@ $(document).ready(function () {
       setTimeout(() => copyButton.innerHTML = defaultButtonValue, 2000);
     });
 
-    // runButton.addEventListener('click', () => {
-    //   const pythonScript = document.createElement('div');
-    //   pythonScript.className = 'python-script';
-    //   pythonScript.contentEditable = true;
-    //   pythonScript.innerHTML = codeBlock.innerText;
+    runButton.addEventListener('click', () => {
+      const pythonScript = document.createElement('div');
+      pythonScript.className = 'python-script';
+      pythonScript.contentEditable = true;
+      pythonScript.innerHTML = codeBlock.innerText;
 
-    //   const output = document.createElement('div');
-    //   output.className = 'output';
+      const output = document.createElement('div');
+      output.className = 'output';
 
-    //   const runCode = document.createElement('button');
-    //   runCode.className = 'run-code';
-    //   runCode.innerHTML = 'Run';
-    //   runCode.onclick = () => {
-    //     const output = pythonScript.innerText;
-    //     const result = brython({
-    //       debug: 1,
-    //       stdout: output
-    //     });
+      const runCode = document.createElement('button');
+      runCode.className = 'run-code';
+      runCode.innerHTML = 'Run';
+      runCode.onclick = async () => {
+        let pyodide = await loadPyodide();
+        const result = pyodide.runPython(`print('Hello, World!')`);
+        console.log(result);
+        output.innerHTML = result;
+      };
 
-    //     console.log(result);
-    //     output.innerHTML = result;
-    //   };
-
-    //   codeBlock.parentNode.parentNode.parentNode.appendChild(pythonScript);
-    //   codeBlock.parentNode.parentNode.parentNode.appendChild(runCode);
-    //   codeBlock.parentNode.parentNode.parentNode.appendChild(output);
-    // });
+      codeBlock.parentNode.parentNode.parentNode.appendChild(pythonScript);
+      codeBlock.parentNode.parentNode.parentNode.appendChild(runCode);
+      codeBlock.parentNode.parentNode.parentNode.appendChild(output);
+    });
   });
 });
-
-// window.addEventListener("load", function () {
-//   brython();
-// });
