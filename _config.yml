@@ -3,7 +3,7 @@ safe: true
 source: .
 incremental: false
 highlighter: rouge
-remote_theme: dieghernan/chulapa
+remote_theme: "dieghernan/chulapa"
 gist:
   noscript: false
 kramdown:
