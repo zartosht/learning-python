@@ -53,10 +53,12 @@ $(document).ready(function () {
       // prevent double creation of python script and output
       if (codeBlock.parentNode.parentNode.parentNode.querySelector('.python-script')) return;
 
+      const code = codeBlock.textContent;
+
       const pythonScript = document.createElement('div');
       pythonScript.className = 'python-script';
       pythonScript.contentEditable = true;
-      pythonScript.innerHTML = codeBlock.innerText;
+      pythonScript.innerHTML = code;
 
       const output = document.createElement('div');
       output.className = 'output';
@@ -66,8 +68,9 @@ $(document).ready(function () {
       runCode.innerHTML = 'Run Code';
       runCode.onclick = async (e) => {
         e.preventDefault();
+        output.innerHTML = 'Loading...';
         let pyodide = await loadPyodide();
-        const result = await pyodide.runPython(codeBlock.innerText);
+        const result = await pyodide.runPython(code);
         output.innerHTML = result;
       };
 
