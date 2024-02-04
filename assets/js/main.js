@@ -74,8 +74,17 @@ $(document).ready(function () {
         output.innerHTML = 'Loading...';
         runCode.disabled = true;
         let pyodide = await loadPyodide();
-        const result = await pyodide.runPython(code);
-        output.innerHTML = result;
+        await pyodide.loadPackage("micropip");
+        await pyodide.runPythonAsync(`
+          import io
+          import sys
+          # Capture print statements
+          sys.stdout = io.StringIO()
+        `);
+        const result = await pyodide.runPythonAsync(code);
+        // Get printed statements
+        const printedOutput = await pyodide.runPythonAsync('sys.stdout.getvalue()');
+        output.innerHTML = printedOutput || result; // Display printed output or the result of the last expression
         runCode.disabled = false;
       };
 
