@@ -28,19 +28,6 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 9999;
 }
 
-.highlight {
-  position: relative;
-  background-color: #f7f7f7;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 1rem;
-  overflow-x: auto;
-}
-
-.highlight pre {
-  margin: 0;
-}
-
 .code-copy-btn {
   position: absolute;
   top: 0.5rem;
