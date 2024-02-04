@@ -64,7 +64,7 @@ $(document).ready(function () {
       output.className = 'output';
 
       const runCode = document.createElement('button');
-      runCode.className = 'run-code btn btn-primary';
+      runCode.className = 'run-code btn btn-primary mx-2';
       runCode.innerHTML = 'Run Code';
       runCode.onclick = async (e) => {
         e.preventDefault();
