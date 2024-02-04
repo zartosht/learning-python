@@ -23,6 +23,7 @@ Python is dynamically typed and garbage-collected. It supports multiple programm
    - **Control Flow - If Statements and Loops**: Controlling the flow of your program using conditional statements and loops.
    - **Functions in Python**: Defining and calling functions, understanding scope, and basic concepts of arguments and return values.
    - **Modules and Packages**: Using Python's extensive standard library and installing third-party packages.
+   - **Python Input/Output Operations**: Reading input from the user and displaying output to the console.
 
 ##### 2. **[Variables and Data Types](001-2-Variables-and-Data-Types)**
    - **Variables**: Declaring and using variables.
