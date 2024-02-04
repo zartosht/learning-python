@@ -1,7 +1,7 @@
 title: Learn Python with Zartosht
 description: >- # this means to ignore newlines until "baseurl:"
   As I learn Python, I will document my journey here. I hope you find it useful.
-baseurl: "learning-python"
+baseurl: "/learning-python"
 lsi: false
 safe: true
 source: .
