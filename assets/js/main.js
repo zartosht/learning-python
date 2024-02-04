@@ -53,6 +53,9 @@ $(document).ready(function () {
       // prevent double creation of python script and output
       if (codeBlock.parentNode.parentNode.parentNode.querySelector('.python-script')) return;
 
+      // disable the run button
+      e.target.disabled = true;
+
       const code = codeBlock.textContent;
 
       const pythonScript = document.createElement('div');
@@ -69,9 +72,11 @@ $(document).ready(function () {
       runCode.onclick = async (e) => {
         e.preventDefault();
         output.innerHTML = 'Loading...';
+        runCode.disabled = true;
         let pyodide = await loadPyodide();
         const result = await pyodide.runPython(code);
         output.innerHTML = result;
+        runCode.disabled = false;
       };
 
       codeBlock.parentNode.parentNode.parentNode.appendChild(pythonScript);
