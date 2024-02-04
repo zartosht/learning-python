@@ -1,6 +1,6 @@
 ---
-layout: default
 title: Introduction to Python
+permalink: /001-Introduction-to-Python
 ---
 
 ### Lesson: Introduction to Python
