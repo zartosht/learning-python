@@ -33,4 +33,24 @@ $(document).ready(function () {
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, 400);
   });
+
+  document.querySelectorAll('pre > code').forEach((codeBlock) => {
+    var button = document.createElement('button');
+    button.className = 'copy-btn';
+    button.textContent = 'Copy';
+    
+    var pre = codeBlock.parentNode;
+    pre.parentNode.insertBefore(button, pre);
+
+    new ClipboardJS('.copy-btn', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+
+    button.addEventListener('click', () => {
+      button.textContent = 'Copied!';
+      setTimeout(() => button.textContent = 'Copy', 2000);
+    });
+  });
 });
