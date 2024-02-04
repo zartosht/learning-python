@@ -1,3 +1,8 @@
+---
+layout: default
+title: Introduction to Python
+---
+
 ### Lesson: Introduction to Python
 
 #### Overview
