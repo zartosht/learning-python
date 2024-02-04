@@ -74,7 +74,7 @@ $(document).ready(function () {
 
       // disable the run button
       e.target.disabled = true;
-      const code = codeBlock.textContent;
+      const code = e.target.previousElementSibling.textContent;
       codeBlock.parentElement.contentEditable = true;
 
 
