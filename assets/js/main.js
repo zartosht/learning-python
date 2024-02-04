@@ -35,7 +35,7 @@ $(document).ready(function () {
 
     const clipboard = new ClipboardJS('.copy-btn', {
       target: function (trigger) {
-        return trigger.nextElementSibling;
+        return trigger.parentNode.nextElementSibling;
       }
     });
 
