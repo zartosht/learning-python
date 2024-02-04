@@ -21,19 +21,18 @@ function copyCodeToClipboard(btn) {
 }
 
 $(document).ready(function () {
+  const btn = $('#button');
   $(window).scroll(function () {
     if ($(this).scrollTop() > 50) {
-      $('.back-to-top').fadeIn();
+      btn.fadeIn();
     } else {
-      $('.back-to-top').fadeOut();
+      btn.fadeOut();
     }
   });
-  $('.back-to-top').click(function () {
+  btn.click(function () {
     $('body,html').animate({
       scrollTop: 0
     }, 400);
     return false;
   });
-
-  // $(".highlighter-rouge").append('<button class="code-copy-btn" onclick="copyCodeToClipboard(this)">Copy</button>');
 });
