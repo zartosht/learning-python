@@ -4,18 +4,20 @@
 <aside id="sidebar" class="sticky-top">
   <ul class="sidebar-nav">
     {% for page in sorted_pages %}
-      {% comment %}Extract the hierarchy from the URL{% endcomment %}
-      {% assign parts = page.url | remove: '/' | split: '-' %}
-      {% assign level = parts[0] %}
+    {% if page.title != '' %}
+    {% comment %}Extract the hierarchy from the URL{% endcomment %}
+    {% assign parts = page.url | remove: '/' | split: '-' %}
+    {% assign level = parts[0] %}
 
-      {% if level contains '.' %}
-        {% comment %}This is a subpage{% endcomment %}
-        <ul class="sub-nav">
-          <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-        </ul>
-      {% else %}
-        <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-      {% endif %}
+    {% if level contains '.' %}
+    {% comment %}This is a subpage{% endcomment %}
+    <ul class="sub-nav">
+      <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+    </ul>
+    {% else %}
+    <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+    {% endif %}
+    {% endif %}
     {% endfor %}
   </ul>
 </aside>
