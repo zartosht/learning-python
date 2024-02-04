@@ -35,11 +35,11 @@ $(document).ready(function () {
   });
 
   document.querySelectorAll('pre > code').forEach((codeBlock) => {
-    var button = document.createElement('button');
+    const button = document.createElement('button');
     button.className = 'copy-btn';
     button.textContent = 'Copy';
     
-    var pre = codeBlock.parentNode;
+    const pre = codeBlock.parentNode;
     pre.parentNode.insertBefore(button, pre);
 
     new ClipboardJS('.copy-btn', {
