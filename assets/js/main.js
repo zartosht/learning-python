@@ -36,8 +36,11 @@ $(document).ready(function () {
 
   document.querySelectorAll('pre > code').forEach((codeBlock) => {
     const button = document.createElement('button');
+    const defaultButtonValue = '<i class="bi-clipboard" style="font-size: 1rem; color: cornflowerblue;"></i>';
+    const copiedButtonValue = '<i class="bi-clipboard-check" style="font-size: 1rem; color: cornflowerblue;"></i>';
+
     button.className = 'copy-btn';
-    button.innerHTML = '<i class="bi-clipboard" style="font-size: 2rem; color: cornflowerblue;"></i>';
+    button.innerHTML = defaultButtonValue;
 
     const pre = codeBlock.parentNode;
     pre.parentNode.insertBefore(button, pre);
@@ -49,12 +52,12 @@ $(document).ready(function () {
     });
 
     clipboard.on('success', function (e) {
-      button.textContent = 'Copied!';
+      button.innerHTML = copiedButtonValue;
       e.clearSelection();
     });
 
     button.addEventListener('click', () => {
-      setTimeout(() => button.textContent = 'Copy', 2000);
+      setTimeout(() => button.innerHTML = defaultButtonValue, 2000);
     });
   });
 });
