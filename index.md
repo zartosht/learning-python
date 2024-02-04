@@ -17,7 +17,7 @@ Python is a high-level, interpreted programming language known for its ease of u
    - Working with Collections
    - Modules and Packages
 
-2. **Basics of Python (002-Basics-of_Python)**
+2. **[Basics of Python](002-Basics-of_Python)**
    - Python Syntax
    - Variables and Data Types
    - Basic Operators
@@ -25,32 +25,32 @@ Python is a high-level, interpreted programming language known for its ease of u
    - Functions
    - Modules and Packages
 
-3. **Control Structures (003-Control-Structures)**
+3. **[Control Structures](003-Control-Structures)**
    - Conditional Statements
    - Loops
    - Loop Control Statements
    - Nested Control Structures
 
-4. **Functions and Modules (004-Functions-and-Modules)**
+4. **[Functions and Modules](004-Functions-and-Modules)**
    - Defining and Calling Functions
    - Parameters and Return Values
    - Introduction to Modules
    - Packages
 
-5. **Data Structures (005-Data-Structures)**
+5. **[Data Structures](005-Data-Structures)**
    - Lists
    - Tuples
    - Dictionaries
    - Sets
    - Operations on Data Structures
 
-6. **Object-Oriented Programming in Python (006-Object-Oriented-Programming-in-Python)**
+6. **[Object-Oriented Programming in Python](006-Object-Oriented-Programming-in-Python)**
    - Classes and Objects
    - Inheritance
    - Encapsulation
    - Polymorphism
 
-7. **Working with Files (007-Working-with-Files)**
+7. **[Working with Files](007-Working-with-Files)**
    - Opening Files
    - Reading Files
    - Writing to Files
@@ -59,7 +59,7 @@ Python is a high-level, interpreted programming language known for its ease of u
    - Handling File Paths
    - Error Handling
 
-8. **Error and Exception Handling (008-Error-and-Exception-Handling)**
+8. **[Error and Exception Handling](008-Error-and-Exception-Handling)**
    - Types of Errors
    - Basic Exception Handling
    - Catching Multiple Exceptions
@@ -68,14 +68,14 @@ Python is a high-level, interpreted programming language known for its ease of u
    - Raising Exceptions
    - Custom Exceptions
 
-9. **Libraries and Frameworks (009-Libraries-and-Frameworks)**
+9. **[Libraries and Frameworks](009-Libraries-and-Frameworks)**
    - Libraries in Python
    - Frameworks in Python
    - Choosing between Libraries and Frameworks
    - Integration of Libraries and Frameworks
    - Benefits and Drawbacks
 
-10. **Advanced Topics (010-Advanced-Topics)**
+10. **[Advanced Topics](010-Advanced-Topics)**
     - Decorators
     - Generators and Iterators
     - Concurrency and Parallelism
