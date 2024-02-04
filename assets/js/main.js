@@ -48,7 +48,11 @@ $(document).ready(function () {
       setTimeout(() => copyButton.innerHTML = defaultButtonValue, 2000);
     });
 
-    runButton.addEventListener('click', () => {
+    runButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      // prevent double creation of python script and output
+      if (codeBlock.parentNode.parentNode.parentNode.querySelector('.python-script')) return;
+
       const pythonScript = document.createElement('div');
       pythonScript.className = 'python-script';
       pythonScript.contentEditable = true;
@@ -58,12 +62,12 @@ $(document).ready(function () {
       output.className = 'output';
 
       const runCode = document.createElement('button');
-      runCode.className = 'run-code';
-      runCode.innerHTML = 'Run';
-      runCode.onclick = async () => {
+      runCode.className = 'run-code btn btn-primary';
+      runCode.innerHTML = 'Run Code';
+      runCode.onclick = async (e) => {
+        e.preventDefault();
         let pyodide = await loadPyodide();
-        const result = pyodide.runPython(`print('Hello, World!')`);
-        console.log(result);
+        const result = await pyodide.runPython(codeBlock.innerText);
         output.innerHTML = result;
       };
 
