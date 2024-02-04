@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include bootstrap.html %}
+  <title>{{ page.title | default: site.title }}</title>
+</head>
+<body>
+<div class="container">
+  <header>
+    <!-- Logo -->
+    <a href="{{ site.baseurl }}/"><img src="/path/to/your/logo.png" alt="Logo"></a>
+    <!-- Header Menu -->
+    <nav>
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="#">Link 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Link 2</a></li>
+        <!-- Add more links as needed -->
+      </ul>
+    </nav>
+  </header>
+
+  <div class="row">
+    <aside class="col-md-4">
+      <!-- Sidebar/Index -->
+      <div id="sidebar" class="sticky-top">
+        <!-- Dynamically generate index/sidebar content based on .md files -->
+      </div>
+    </aside>
+    <main class="col-md-8">
+      {{ content }}
+    </main>
+  </div>
+
+  <footer>
+    <p>Your Footer Content</p>
+  </footer>
+</div>
+
+<!-- Back to Top Button -->
+<a href="#" class="btn btn-primary back-to-top">Back to Top</a>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+// JavaScript for Back to Top button
+$(document).ready(function(){
+  $(window).scroll(function () {
+     if ($(this).scrollTop() > 50) {
+         $('.back-to-top').fadeIn();
+     } else {
+         $('.back-to-top').fadeOut();
+     }
+  });
+  $('.back-to-top').click(function () {
+     $('body,html').animate({
+         scrollTop: 0
+     }, 400);
+     return false;
+  });
+});
+</script>
+</body>
+</html>
