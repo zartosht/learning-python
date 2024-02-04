@@ -3,7 +3,7 @@ safe: true
 source: .
 incremental: false
 highlighter: rouge
-remote_theme: "mmistakes/so-simple-theme@3.2.0"
+remote_theme: dieghernan/chulapa
 gist:
   noscript: false
 kramdown:
