@@ -15,8 +15,8 @@ Python is dynamically typed and garbage-collected. It supports multiple programm
 
 #### Chapters
 
-##### 1. **[Getting Started with Python](./001.1-Getting%20Started%20with%20Python.md)**
-   - **[Installing Python](./001.1-Getting%20Started%20with%20Python.md#Chapter%201:%20Installing%20Python)**: How to install Python on different operating systems.
+##### 1. **[Getting Started with Python](/001-Introduction-to-Python)**
+   - **[Installing Python](/001-Introduction-to-Python#Chapter%201:%20Installing%20Python)**: How to install Python on different operating systems.
    - **[Your First Python Program](./001.1.2-Your%20First%20Python%20Program.md)**: Writing and running a simple "Hello, World!" program.
    - **[Python Syntax Basics](./001.1.3-Python%20Syntax%20Basics.md)**: Basic syntax rules, indentation, and structure.
    - **[Data Types and Structures](./001.1.4-Data%20Types%20and%20Structures.md)**: Exploring Python's built-in data types and structures.
