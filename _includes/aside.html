@@ -1,9 +1,22 @@
-<aside id="sidebar">
-  <ul class="nav" class="sticky-top">
-    {% for page in site.pages %}
-      {% if page.url != '/' %}
-        <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-      {% endif %}
+{% assign pages_list = site.pages | where_exp: "page", "page.url contains 'Introduction-to-Python' or page.url contains
+'Getting-Started-with-Python'" %}
+{% assign sorted_pages = pages_list | sort: "url" %}
+
+<aside id="sidebar" class="sticky-top">
+  <ul class="sidebar-nav">
+    {% for page in sorted_pages %}
+    {% comment %}Extract the hierarchy from the URL{% endcomment %}
+    {% assign parts = page.url | remove: '/' | split: '-' %}
+    {% assign level = parts[0] %}
+
+    {% if level contains '.' %}
+    {% comment %}This is a subpage{% endcomment %}
+    <ul class="sub-nav">
+      <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+    </ul>
+    {% else %}
+    <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+    {% endif %}
     {% endfor %}
   </ul>
 </aside>
