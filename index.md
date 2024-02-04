@@ -1,3 +1,8 @@
+---
+layout: custom
+title: Learn Python
+---
+
 ## Topic: Python
 
 ### Summary
