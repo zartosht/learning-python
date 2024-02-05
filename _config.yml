@@ -5,6 +5,7 @@ baseurl: "/"
 author:
   name: Zartosht Sepideman
   email: hi@zatosht.dev
+logo: /assets/images/logo.png
 social:
   name: Zartosht Sepideman
   links:
