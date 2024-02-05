@@ -2,9 +2,19 @@ title: Learn Python with Zartosht
 description: >- # this means to ignore newlines until "baseurl:"
   As I learn Python, I will document my journey here. I hope you find it useful.
 baseurl: "/"
+author:
+  name: Zartosht Sepideman
+  email: hi@zatosht.dev
+social:
+  name: Zartosht Sepideman
+  links:
+    - https://www.linkedin.com/in/zartoshtsepideman
+    - https://github.com/zartosht
+    - https://stackoverflow.com/users/3632888/zartosht-sepideman
 lsi: false
 safe: true
 source: .
+url: "https://python.zartosht.dev"
 incremental: false
 gist:
   noscript: false
@@ -17,3 +27,6 @@ kramdown:
 markdown: kramdown
 sass:
   sass_dir: _sass
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
