@@ -21,11 +21,11 @@ As a third-party vendor, Google uses cookies to serve ads on "Learning Python wi
 
 ## Third-Party Advertising
 
-We use third-party advertising companies to serve ads when you visit our website. These companies may use information (not including your name, address, email address, or telephone number) about your visits to this and other websites in order to provide advertisements about goods and services of interest to you.
+So, when you come to our site, there are adverts which are displayed by third-party advertising companies. To get ads about services and goods that you may find worthy, these firms may look at details of your visits to this as well as other websites.
 
 ## Google Adsense
 
-"Learning Python with Zartosht" displays ads provided by Google AdSense. Google AdSense is a service which allows the placement of ads on websites. Google AdSense uses data about our users, for example, to show them personalized ads or to report on conversions.
+Ads on "Learning Python with Zartosht" are provided through Google AdSense. It is the service which allows sites to post advertisements. For example, Google AdSense uses data about our users in order to present personalized ads or conversions reports to them.
 
 ## Consent
 
@@ -33,10 +33,10 @@ By using our website, you hereby consent to our privacy policy and agree to its 
 
 ## Changes to our Privacy Policy
 
-We reserve the right to make changes to this privacy policy at any time. When we do, we will revise the updated date at the top of this page. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect.
+We reserve the right to make changes to this privacy policy at any time. When we do so, we will update this page accordingly. As a result, it is advisable for users to often look here for any changes regarding how we safeguard their individual information.
 
 ## Contact Us
 
-If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please contact me at:
+For inquiries about this Privacy Policy or if you have any questions about the practices of the site or dealings with this site please contact me at:
 
 [Hi@zartosht.dev](mailto:hi@zartosht.dev)
