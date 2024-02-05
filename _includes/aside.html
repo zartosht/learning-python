@@ -1,23 +1,7 @@
-{% assign pages_list = site.pages %}
-{% assign sorted_pages = pages_list | sort: "url" %}
-
 <aside id="sidebar" class="sticky-top">
   <ul class="sidebar-nav">
-    {% for page in sorted_pages %}
-    {% if page.title != '' and page.url != 'https://python.zartosht.dev/Privacy-Policy' %}
-    {% comment %}Extract the hierarchy from the URL{% endcomment %}
-    {% assign parts = page.url | remove: '/' | split: '-' %}
-    {% assign level = parts[0] %}
-
-    {% if level contains '.' %}
-    {% comment %}This is a subpage{% endcomment %}
-    <!-- <ul class="sub-nav">
-      <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-    </ul> -->
-    {% else %}
-    <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-    {% endif %}
-    {% endif %}
-    {% endfor %}
+    <li class="sidebar-item">
+      <a href="{{ 001-Introduction-to-Python | prepend: site.baseurl }}/" class="sidebar-link">Introduction to Python</a>
+    </li>
   </ul>
 </aside>
