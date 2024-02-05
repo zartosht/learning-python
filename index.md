@@ -5,7 +5,7 @@ title: Learn Python
 ## Topic: Python
 
 ### Summary
-Python is a high-level, interpreted programming language known for its ease of use and readability. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Python is widely used for web development, data analysis, artificial intelligence, scientific computing, and more. Its extensive standard library and vast ecosystem of third-party packages make it a versatile tool for programmers and researchers alike.
+Python is an interpreted, high-level programming language that is famous for its readability and ease of use. It supports many programming paradigms which include procedural, object-oriented as well as functional programming. Python sees extensive use in web development, data analysis, artificial intelligence and scientific computing among other things. Its extensive standard library and large number of third party packages make it a tool for programmers and researchers in general.
 
 ### Lesson Plan
 
