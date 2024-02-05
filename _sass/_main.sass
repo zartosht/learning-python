@@ -15,6 +15,12 @@ a
   text-decoration: none
   color: #03a9f4
 
+.navbar-brand
+  font-family: 'Pacifico', cursive
+  font-size: 4vw
+  @media (min-width: 480px)
+    font-size: clamp(24px, 4vw, 32px) // Ensures font-size stays within specified bounds
+
 h1, h2, h3, h4, h5, h6
   font-family: 'Roboto', sans-serif
   font-weight: 700 // For a bolder heading, optional
