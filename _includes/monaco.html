@@ -22,7 +22,7 @@
           monacoEditor.setAttribute('style', `width: 100%; height: 100%;`);
 
           const monacoResizeBar = document.createElement('div');
-          monacoResizeBar.setAttribute('style', `position: relative; width: 100px; height: 3px; background-color: #f1f1f1; cursor: row-resize; bottom: 2px; margin: 0 auto; border-radius: 1rem;`);
+          monacoResizeBar.setAttribute('style', `position: relative; width: 100px; height: 3px; background-color: #f1f1f1; cursor: row-resize; bottom: 5px; margin: 0 auto; border-radius: 1rem;`);
 
           monacoContainer.appendChild(monacoEditor);
           monacoContainer.appendChild(monacoResizeBar);
@@ -49,6 +49,9 @@
             monacoContainer.style.height = newHeight + 'px';
             monacoContainer.style.width = width + 'px';
             editor.layout({ width: currentEditorWidth, height: newHeight });
+
+            // reset scroll position to top
+            editor.setScrollTop(0);
           });
 
           // Set the editor layout to the pre size
