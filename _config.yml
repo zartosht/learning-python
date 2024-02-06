@@ -20,12 +20,12 @@ incremental: false
 gist:
   noscript: false
 # highlighter: rouge
-kramdown:
-  math_engine: mathjax
+# kramdown:
+  # math_engine: mathjax
   # syntax_highlighter: rouge
-  input: GFM
-  auto_ids: true
-markdown: kramdown
+  # input: GFM
+  # auto_ids: true
+# markdown: kramdown
 sass:
   sass_dir: _sass
 plugins:
