@@ -10,20 +10,21 @@
       require(['vs/editor/editor.main'], function () {
         const codeContainer = document.querySelector('pre > code');
         const pre = codeContainer.parentElement;
-        // codeContainer.setAttribute('style');
         const editor = monaco.editor.create(codeContainer, {
           value: codeContainer.textContent,
           language: 'python',
-          // automaticLayout: true,
           theme: 'vs-dark'
         });
 
-        // editor.layout();
         const width = pre.offsetWidth;
         const height = pre.offsetHeight;
         // // B. The editor does not need to scan the container, 
         // // avoiding a forced layout
-        editor.layout({ width, height });
+        editor.layout({ width, height: height + 30 });
+
+        // C. The editor is ready to be used
+        // Hide the original code
+        pre.style.display = 'none';
       });
     };
 
