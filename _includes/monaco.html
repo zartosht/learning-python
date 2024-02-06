@@ -59,15 +59,15 @@
               return;
             }
             // Calculate the new size of the editor container
-            var newHeight = e.clientY - monacoContainer.getBoundingClientRect().top;
-            var newWidth = e.clientX - monacoContainer.getBoundingClientRect().left;
+            const newHeight = e.clientY - monacoContainer.getBoundingClientRect().top;
+            const width = monacoContainer.getBoundingClientRect().width;
 
             // Apply the new size to the editor container
             monacoContainer.style.height = newHeight + 'px';
-            monacoContainer.style.width = newWidth + 'px';
+            monacoContainer.style.width = width + 'px';
 
             // Tell the editor to re-layout itself
-            editor.layout({ width: newWidth, height: newHeight });
+            editor.layout({ width: width, height: newHeight });
           }
 
           // Stop resizing
