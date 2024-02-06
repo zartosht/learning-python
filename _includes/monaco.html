@@ -14,21 +14,31 @@
           const pre = codeContainer.parentElement;
 
           const monacoContainer = document.createElement('div');
-          monacoContainer.style.width = '100%';
-          monacoContainer.style.height = '100%';
+          monacoContainer.className = 'monaco-container';
+
+          const monacoEditor = document.createElement('div');
+          monacoEditor.className = 'editor';
+
+          const monacoResizeBar = document.createElement('div');
+          monacoResizeBar.className = 'resize-bar';
+
+          monacoContainer.appendChild(monacoEditor);
+          monacoContainer.appendChild(monacoResizeBar);
+
           // Insert the new container after the pre
           pre.parentElement.insertBefore(monacoContainer, pre.nextSibling);
 
-          const editor = monaco.editor.create(monacoContainer, {
+          const editor = monaco.editor.create(monacoEditor, {
             value: codeContainer.textContent,
             language: 'python',
-            theme: 'vs-dark'
+            theme: 'vs-dark',
+            fontSize: 16,
           });
 
           // Set the editor size to the pre size
           const width = pre.offsetWidth;
           const height = pre.offsetHeight;
-          editor.layout({ width, height: height + 30 });
+          editor.layout({ width, height: height + 10 });
 
           // The editor is ready to be used
           // Hide the original code
