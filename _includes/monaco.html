@@ -16,13 +16,13 @@
           const height = pre.offsetHeight;
 
           const monacoContainer = document.createElement('div');
-          monacoContainer.setAttribute('style', `position: relative; width: 100%; height: ${height}px;`);
+          monacoContainer.setAttribute('style', `position: relative; width: 100%; height: ${height}px; padding 1rem 0; margin: 2rem 0;`);
 
           const monacoEditor = document.createElement('div');
           monacoEditor.setAttribute('style', `width: 100%; height: 100%;`);
 
           const monacoResizeBar = document.createElement('div');
-          monacoResizeBar.setAttribute('style', `position: relative; width: 100px; height: 3px; background-color: #f1f1f1; cursor: row-resize; bottom: 2px; margin: 0 auto; border-radius: 1rem;`);
+          monacoResizeBar.setAttribute('style', `position: relative; width: 100px; height: 3px; background-color: #f1f1f1; cursor: row-resize; bottom: -5px; margin: 0 auto; border-radius: 1rem;`);
 
           monacoContainer.appendChild(monacoEditor);
           monacoContainer.appendChild(monacoResizeBar);
