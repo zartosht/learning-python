@@ -51,13 +51,15 @@ $(document).ready(function () {
     runButton.addEventListener('click', (e) => {
       e.preventDefault();
 
-      let output;
+      let pre;
       let runCode;
 
       // prevent double creation of python script and output
       if (!codeBlock.parentNode.parentNode.parentNode.querySelector('.run-code')) {
-        output = document.createElement('div');
-        output.className = 'output';
+        pre = document.createElement('pre');
+        pre.className = 'output';
+        const code = document.createElement('code');
+        pre.appendChild(code);
 
         runCode = document.createElement('button');
         runCode.className = 'run-code btn btn-primary my-2';
@@ -66,11 +68,11 @@ $(document).ready(function () {
         codeBlock.parentNode.parentNode.parentNode.appendChild(runCode);
         codeBlock.parentNode.parentNode.parentNode.appendChild(output);
       } else {
-        output = codeBlock.parentNode.parentNode.parentNode.querySelector('.output');
+        pre = codeBlock.parentNode.parentNode.parentNode.querySelector('.output');
         runCode = codeBlock.parentNode.parentNode.parentNode.querySelector('.run-code');
       }
 
-      if(!runCode || !output) return;
+      if (!runCode || !output) return;
 
       // disable the run button
       e.target.disabled = true;
@@ -78,7 +80,7 @@ $(document).ready(function () {
 
       runCode.onclick = async (e) => {
         e.preventDefault();
-        output.innerHTML = 'Loading...';
+        pre.firstChild.innerHTML = 'Loading...';
         runCode.disabled = true;
         let pyodide = await loadPyodide();
         await pyodide.loadPackage("micropip");
@@ -92,8 +94,11 @@ $(document).ready(function () {
         const result = await pyodide.runPythonAsync(code);
         // Get printed statements
         const printedOutput = await pyodide.runPythonAsync('sys.stdout.getvalue()');
-        output.innerHTML = printedOutput || result; // Display printed output or the result of the last expression
+        pre.firstChild.innerHTML = printedOutput || result; // Display printed output or the result of the last expression
         runCode.disabled = false;
+
+        hljs.configure({ languages: ['zsh'] })
+        hljs.highlightBlock(pre);
       };
     });
   });
