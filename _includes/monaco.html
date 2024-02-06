@@ -16,13 +16,12 @@
           theme: 'vs-dark'
         });
 
+        // Set the editor size to the pre size
         const width = pre.offsetWidth;
         const height = pre.offsetHeight;
-        // // B. The editor does not need to scan the container, 
-        // // avoiding a forced layout
         editor.layout({ width, height: height + 30 });
 
-        // C. The editor is ready to be used
+        // The editor is ready to be used
         // Hide the original code
         pre.style.display = 'none';
       });
