@@ -9,10 +9,12 @@
       });
       require(['vs/editor/editor.main'], function () {
         const editor = document.querySelector('pre > code');
-        editor.setAttribute('style', 'height: 100%; width: 500px;');
+        editor.setAttribute('style', 'height: 100%;');
         monaco.editor.create(editor, {
           value: editor.textContent,
-          language: 'python'
+          language: 'python',
+          automaticLayout: true,
+          theme: 'vs-dark'
         });
       });
     };
