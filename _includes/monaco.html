@@ -8,22 +8,25 @@
         paths: { 'vs': 'https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs' }
       });
       require(['vs/editor/editor.main'], function () {
-        const codeContainer = document.querySelector('pre > code');
-        const pre = codeContainer.parentElement;
-        const editor = monaco.editor.create(codeContainer, {
-          value: codeContainer.textContent,
-          language: 'python',
-          theme: 'vs-dark'
+        const codeContainers = document.querySelectorAll('pre > code');
+
+        codeContainers.forEach((codeContainer) => {
+          const pre = codeContainer.parentElement;
+          const editor = monaco.editor.create(codeContainer, {
+            value: codeContainer.textContent,
+            language: 'python',
+            theme: 'vs-dark'
+          });
+
+          // Set the editor size to the pre size
+          const width = pre.offsetWidth;
+          const height = pre.offsetHeight;
+          editor.layout({ width, height: height + 30 });
+
+          // The editor is ready to be used
+          // Hide the original code
+          pre.style.display = 'none';
         });
-
-        // Set the editor size to the pre size
-        const width = pre.offsetWidth;
-        const height = pre.offsetHeight;
-        editor.layout({ width, height: height + 30 });
-
-        // The editor is ready to be used
-        // Hide the original code
-        // pre.style.display = 'none';
       });
     };
 
