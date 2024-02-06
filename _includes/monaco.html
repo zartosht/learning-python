@@ -48,6 +48,8 @@
 
             // Set the editor layout to the new size, but not changing the width only if the new height is greater than the current height
             if (newHeight > monacoContainer.getBoundingClientRect().height) {
+              monacoContainer.style.height = newHeight + 'px';
+              monacoContainer.style.width = width + 'px';
               editor.layout({ width: currentEditorWidth, height: newHeight });
             }
           });
