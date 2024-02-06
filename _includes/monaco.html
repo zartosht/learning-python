@@ -1,3 +1,21 @@
 <script>
+  $(document).ready(function() {
+    const loaderjs = document.createElement('script');
+    loaderjs.src = '/assets/js/loader.js';
+
+
+    document.body.appendChild(loaderjs);
+    // require.config({ paths: { 'vs': 'https:xxxxx.xxxxxxxx.xxxxxxxxxxxxxxxxxxxxx@x.xx.xxxxxxxx' }});
+    // require(['vs/editor/editor.main'], function() {
+    //   var editor = monaco.editor.create(document.getElementById('editor'), {
+    //     value: [
+    //       'function x() {',
+    //       '\tconsole.log("Hello world!");',
+    //       '}'
+    //     ].join('\n'),
+    //     language: 'javascript'
+    //   });
+    // });
+  });
   // require.config({ paths: { 'vs': 'https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs' }});
 </script>
