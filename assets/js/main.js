@@ -95,7 +95,7 @@ $(document).ready(function () {
         // Get printed statements
         const scriptResult = await pyodide.runPythonAsync('sys.stdout.getvalue()');
 
-        if((printedOutput || result) === undefined) {
+        if((scriptResult || result) === undefined) {
           pre.firstChild.innerHTML = 'Error: No output';
         } else {
           pre.firstChild.innerHTML = scriptResult || result; // Display printed output or the result of the last expression
