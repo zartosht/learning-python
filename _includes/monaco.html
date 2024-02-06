@@ -41,7 +41,7 @@
 
           // Listen for changes in the editor content
           editor.onDidChangeModelContent((event) => {
-            const fontSize = editor.getConfiguration().fontInfo.fontSize;
+            const fontSize = editor.getOption(monaco.editor.EditorOption.fontSize);
             const lineBreaks = editor.getModel().getLineCount();
             const currentEditorWidth = monacoContainer.getBoundingClientRect().width;
             const newHeight = fontSize * lineBreaks + 2;
