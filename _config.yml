@@ -19,10 +19,10 @@ url: "https://python.zartosht.dev"
 incremental: false
 gist:
   noscript: false
-highlighter: rouge
+highlighter: none
 kramdown:
   math_engine: mathjax
-  syntax_highlighter: rouge
+  syntax_highlighter: none
   input: GFM
   auto_ids: true
 markdown: kramdown
