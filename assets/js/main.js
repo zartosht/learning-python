@@ -12,109 +12,110 @@ $(document).ready(function () {
     $('html, body').animate({ scrollTop: 0 }, 400);
   });
 
-  document.querySelectorAll('pre > code').forEach((codeBlock) => {
-    const buttonsContainer = document.createElement('div');
-    buttonsContainer.className = 'buttons-container';
 
-    const defaultButtonValue = '<i class="bi-clipboard" style="font-size: 1.2rem; color: cornflowerblue;"></i>';
-    const copiedButtonValue = '<i class="bi-clipboard-check" style="font-size: 1.2rem; color: cornflowerblue;"></i>';
+  // document.querySelectorAll('pre > code').forEach((codeBlock) => {
+  //   const buttonsContainer = document.createElement('div');
+  //   buttonsContainer.className = 'buttons-container';
 
-    const copyButton = document.createElement('button');
-    copyButton.className = 'copy-btn';
-    copyButton.innerHTML = defaultButtonValue;
+  //   const defaultButtonValue = '<i class="bi-clipboard" style="font-size: 1.2rem; color: cornflowerblue;"></i>';
+  //   const copiedButtonValue = '<i class="bi-clipboard-check" style="font-size: 1.2rem; color: cornflowerblue;"></i>';
 
-    const runButton = document.createElement('button');
-    runButton.className = 'run-btn';
-    runButton.innerHTML = '<i class="bi-play-circle" style="font-size: 1.2rem; color: cornflowerblue;"></i>';
+  //   const copyButton = document.createElement('button');
+  //   copyButton.className = 'copy-btn';
+  //   copyButton.innerHTML = defaultButtonValue;
 
-    buttonsContainer.appendChild(copyButton);
-    buttonsContainer.appendChild(runButton);
+  //   const runButton = document.createElement('button');
+  //   runButton.className = 'run-btn';
+  //   runButton.innerHTML = '<i class="bi-play-circle" style="font-size: 1.2rem; color: cornflowerblue;"></i>';
 
-    const pre = codeBlock.parentNode;
-    pre.parentNode.insertBefore(buttonsContainer, pre);
+  //   buttonsContainer.appendChild(copyButton);
+  //   buttonsContainer.appendChild(runButton);
 
-    const clipboard = new ClipboardJS('.copy-btn', {
-      target: function (trigger) {
-        return trigger.parentNode.nextElementSibling;
-      }
-    });
+  //   const pre = codeBlock.parentNode;
+  //   pre.parentNode.insertBefore(buttonsContainer, pre);
 
-    clipboard.on('success', function (e) {
-      copyButton.innerHTML = copiedButtonValue;
-      e.clearSelection();
-    });
+  //   const clipboard = new ClipboardJS('.copy-btn', {
+  //     target: function (trigger) {
+  //       return trigger.parentNode.nextElementSibling;
+  //     }
+  //   });
 
-    copyButton.addEventListener('click', () => {
-      setTimeout(() => copyButton.innerHTML = defaultButtonValue, 2000);
-    });
+  //   clipboard.on('success', function (e) {
+  //     copyButton.innerHTML = copiedButtonValue;
+  //     e.clearSelection();
+  //   });
 
-    runButton.addEventListener('click', (e) => {
-      e.preventDefault();
+  //   copyButton.addEventListener('click', () => {
+  //     setTimeout(() => copyButton.innerHTML = defaultButtonValue, 2000);
+  //   });
 
-      let pre;
-      let runCode;
+  //   runButton.addEventListener('click', (e) => {
+  //     e.preventDefault();
 
-      // prevent double creation of python script and output
-      if (!codeBlock.parentNode.parentNode.parentNode.querySelector('.run-code')) {
-        pre = document.createElement('pre');
-        pre.className = 'output';
-        const code = document.createElement('code');
-        pre.appendChild(code);
+  //     let pre;
+  //     let runCode;
 
-        runCode = document.createElement('button');
-        runCode.className = 'run-code btn btn-primary my-2';
-        runCode.innerHTML = 'Run Code';
+  //     // prevent double creation of python script and output
+  //     if (!codeBlock.parentNode.parentNode.parentNode.querySelector('.run-code')) {
+  //       pre = document.createElement('pre');
+  //       pre.className = 'output';
+  //       const code = document.createElement('code');
+  //       pre.appendChild(code);
 
-        codeBlock.parentNode.parentNode.parentNode.appendChild(runCode);
-        codeBlock.parentNode.parentNode.parentNode.appendChild(pre);
-      } else {
-        pre = codeBlock.parentNode.parentNode.parentNode.querySelector('.output');
-        runCode = codeBlock.parentNode.parentNode.parentNode.querySelector('.run-code');
+  //       runCode = document.createElement('button');
+  //       runCode.className = 'run-code btn btn-primary my-2';
+  //       runCode.innerHTML = 'Run Code';
 
-        pre.innerHTML = ''; 
-        const code = document.createElement('code');
-        pre.appendChild(code);
-      }
+  //       codeBlock.parentNode.parentNode.parentNode.appendChild(runCode);
+  //       codeBlock.parentNode.parentNode.parentNode.appendChild(pre);
+  //     } else {
+  //       pre = codeBlock.parentNode.parentNode.parentNode.querySelector('.output');
+  //       runCode = codeBlock.parentNode.parentNode.parentNode.querySelector('.run-code');
 
-      if (!runCode || !pre) return;
+  //       pre.innerHTML = ''; 
+  //       const code = document.createElement('code');
+  //       pre.appendChild(code);
+  //     }
 
-      // disable the run button
-      e.target.disabled = true;
-      codeBlock.contentEditable = true;
+  //     if (!runCode || !pre) return;
 
-      runCode.onclick = async (e) => {
-        e.preventDefault();
-        pre.firstChild.innerHTML = 'Loading...';
-        pre.removeAttribute('data-highlighted');
-        pre.classList.remove('hljs');
-        pre.classList.remove('language-python');
-        pre.classList.remove('language-zsh');
+  //     // disable the run button
+  //     e.target.disabled = true;
+  //     codeBlock.contentEditable = true;
 
-        runCode.disabled = true;
-        let pyodide = await loadPyodide();
-        await pyodide.loadPackage("micropip");
-        await pyodide.runPythonAsync(`
-          import io
-          import sys
-          # Capture print statements
-          sys.stdout = io.StringIO()
-        `);
-        const code = e.target.parentElement.querySelector('pre > code').textContent;
-        const result = await pyodide.runPythonAsync(code);
-        // Get printed statements
-        const scriptResult = await pyodide.runPythonAsync('sys.stdout.getvalue()');
+  //     runCode.onclick = async (e) => {
+  //       e.preventDefault();
+  //       pre.firstChild.innerHTML = 'Loading...';
+  //       pre.removeAttribute('data-highlighted');
+  //       pre.classList.remove('hljs');
+  //       pre.classList.remove('language-python');
+  //       pre.classList.remove('language-zsh');
 
-        if((scriptResult || result) === undefined) {
-          pre.firstChild.innerHTML = 'Error: No output';
-        } else {
-          pre.firstChild.innerHTML = scriptResult || result; // Display printed output or the result of the last expression
-        }
+  //       runCode.disabled = true;
+  //       let pyodide = await loadPyodide();
+  //       await pyodide.loadPackage("micropip");
+  //       await pyodide.runPythonAsync(`
+  //         import io
+  //         import sys
+  //         # Capture print statements
+  //         sys.stdout = io.StringIO()
+  //       `);
+  //       const code = e.target.parentElement.querySelector('pre > code').textContent;
+  //       const result = await pyodide.runPythonAsync(code);
+  //       // Get printed statements
+  //       const scriptResult = await pyodide.runPythonAsync('sys.stdout.getvalue()');
 
-        runCode.disabled = false;
+  //       if((scriptResult || result) === undefined) {
+  //         pre.firstChild.innerHTML = 'Error: No output';
+  //       } else {
+  //         pre.firstChild.innerHTML = scriptResult || result; // Display printed output or the result of the last expression
+  //       }
 
-        hljs.configure({ languages: ['zsh'] })
-        hljs.highlightBlock(pre);
-      };
-    });
-  });
+  //       runCode.disabled = false;
+
+  //       hljs.configure({ languages: ['zsh'] })
+  //       hljs.highlightBlock(pre);
+  //     };
+  //   });
+  // });
 });
