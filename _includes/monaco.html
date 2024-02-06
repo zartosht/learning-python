@@ -9,17 +9,18 @@
       });
       require(['vs/editor/editor.main'], function () {
         const codeContainer = document.querySelector('pre > code');
+        const pre = codeContainer.parentElement;
         // codeContainer.setAttribute('style');
         const editor = monaco.editor.create(codeContainer, {
           value: codeContainer.textContent,
           language: 'python',
-          automaticLayout: true,
+          // automaticLayout: true,
           theme: 'vs-dark'
         });
 
         // editor.layout();
-        const width = codeContainer.offsetWidth;
-        const height = codeContainer.offsetHeight;
+        const width = pre.offsetWidth;
+        const height = pre.offsetHeight;
         // // B. The editor does not need to scan the container, 
         // // avoiding a forced layout
         editor.layout({ width, height });
