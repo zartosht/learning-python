@@ -41,17 +41,14 @@
 
           // Listen for changes in the editor content
           editor.onDidChangeModelContent((event) => {
-            const fontSize = editor.getOption(monaco.editor.EditorOption.fontSize);
+            const currentLineHeight = editor.getOption(monaco.editor.EditorOption.lineHeight);
             const lineBreaks = editor.getModel().getLineCount();
             const currentEditorWidth = monacoContainer.getBoundingClientRect().width;
-            const newHeight = fontSize * lineBreaks + 2;
+            const newHeight = currentLineHeight * lineBreaks + 2;
 
-            // Set the editor layout to the new size, but not changing the width only if the new height is greater than the current height
-            if (newHeight > monacoContainer.getBoundingClientRect().height) {
-              monacoContainer.style.height = newHeight + 'px';
-              monacoContainer.style.width = width + 'px';
-              editor.layout({ width: currentEditorWidth, height: newHeight });
-            }
+            monacoContainer.style.height = newHeight + 'px';
+            monacoContainer.style.width = width + 'px';
+            editor.layout({ width: currentEditorWidth, height: newHeight });
           });
 
           // Set the editor layout to the pre size
