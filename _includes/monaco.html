@@ -37,6 +37,10 @@
             fontSize: 16,
           });
 
+          editor.onDidChangeModelContent((event) => {
+            console.dir(event, { depth: null });
+          });
+
           // Set the editor layout to the pre size
           editor.layout({ width, height: height + 2 });
 
