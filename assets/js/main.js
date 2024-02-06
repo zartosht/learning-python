@@ -93,8 +93,14 @@ $(document).ready(function () {
         const code = e.target.parentElement.querySelector('pre > code').textContent;
         const result = await pyodide.runPythonAsync(code);
         // Get printed statements
-        const printedOutput = await pyodide.runPythonAsync('sys.stdout.getvalue()');
-        pre.firstChild.innerHTML = printedOutput || result; // Display printed output or the result of the last expression
+        const scriptResult = await pyodide.runPythonAsync('sys.stdout.getvalue()');
+
+        if((printedOutput || result) === undefined) {
+          pre.firstChild.innerHTML = 'Error: No output';
+        } else {
+          pre.firstChild.innerHTML = scriptResult || result; // Display printed output or the result of the last expression
+        }
+
         runCode.disabled = false;
 
         hljs.configure({ languages: ['zsh'] })
