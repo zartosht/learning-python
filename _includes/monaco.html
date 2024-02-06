@@ -37,8 +37,27 @@
             fontSize: 16,
           });
 
+          // Add some buttons to the editor
+          const buttons = document.createElement('div');
+          buttons.setAttribute('style', 'position: absolute; top: 0; right: 0; padding: 5px;');
+          buttons.innerHTML = `
+            <button onclick="editor.getAction('editor.action.formatDocument').run()">Format</button>
+            <button onclick="editor.getAction('editor.action.commentLine').run()">Comment</button>
+            <button onclick="editor.getAction('editor.action.formatDocument').run()">Run</button>
+          `;
+          monacoContainer.appendChild(buttons);
+
+          // Listen for changes in the editor content
           editor.onDidChangeModelContent((event) => {
-            console.dir(editor.getValue(), { depth: null });
+            const fontSize = editor.getConfiguration().fontInfo.fontSize;
+            const lineBreaks = editor.getModel().getLineCount();
+            const currentEditorWidth = monacoContainer.getBoundingClientRect().width;
+            const newHeight = fontSize * lineBreaks + 2;
+
+            // Set the editor layout to the new size, but not changing the width only if the new height is greater than the current height
+            if (newHeight > monacoContainer.getBoundingClientRect().height) {
+              editor.layout({ width: currentEditorWidth, height: newHeight });
+            }
           });
 
           // Set the editor layout to the pre size
