@@ -14,13 +14,13 @@
           const pre = codeContainer.parentElement;
 
           const monacoContainer = document.createElement('div');
-          monacoContainer.className = 'monaco-container';
+          monacoContainer.setAttribute('style', `position: relative; width: 100%; height: 400px;`);
 
           const monacoEditor = document.createElement('div');
-          monacoEditor.className = 'editor';
+          monacoEditor.setAttribute('style', `width: 100%; height: 100%;`);
 
           const monacoResizeBar = document.createElement('div');
-          monacoResizeBar.className = 'resize-bar';
+          monacoResizeBar.setAttribute('style', `position: absolute; width: 100%; height: 3px; background-color: #f1f1f1; cursor: row-resize; bottom: 0; left: 0;`);
 
           monacoContainer.appendChild(monacoEditor);
           monacoContainer.appendChild(monacoResizeBar);
@@ -38,7 +38,7 @@
           // Set the editor size to the pre size
           const width = pre.offsetWidth;
           const height = pre.offsetHeight;
-          editor.layout({ width, height: height + 10 });
+          editor.layout({ width, height: height + 2 });
 
           // The editor is ready to be used
           // Hide the original code
