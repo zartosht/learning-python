@@ -38,7 +38,7 @@
           });
 
           editor.onDidChangeModelContent((event) => {
-            console.dir(event, { depth: null });
+            console.dir(editor.getValue(), { depth: null });
           });
 
           // Set the editor layout to the pre size
