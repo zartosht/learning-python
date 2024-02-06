@@ -17,10 +17,12 @@
           theme: 'vs-dark'
         });
 
-        editor.layout();
+        // editor.layout();
+        const width = codeContainer.offsetWidth;
+        const height = codeContainer.offsetHeight;
         // // B. The editor does not need to scan the container, 
         // // avoiding a forced layout
-        // codeContainer.layout({ width: w, height: h });
+        codeContainer.layout({ width, height });
       });
     };
 
