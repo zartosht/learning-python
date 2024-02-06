@@ -66,13 +66,13 @@ $(document).ready(function () {
         runCode.innerHTML = 'Run Code';
 
         codeBlock.parentNode.parentNode.parentNode.appendChild(runCode);
-        codeBlock.parentNode.parentNode.parentNode.appendChild(output);
+        codeBlock.parentNode.parentNode.parentNode.appendChild(pre);
       } else {
         pre = codeBlock.parentNode.parentNode.parentNode.querySelector('.output');
         runCode = codeBlock.parentNode.parentNode.parentNode.querySelector('.run-code');
       }
 
-      if (!runCode || !output) return;
+      if (!runCode || !pre) return;
 
       // disable the run button
       e.target.disabled = true;
