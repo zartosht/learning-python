@@ -78,11 +78,6 @@ $(document).ready(function () {
 
       if (!runCode || !pre) return;
 
-      pre.removeAttribute('data-highlighted');
-      pre.classList.remove('hljs');
-      pre.classList.remove('language-python');
-      pre.classList.remove('language-zsh');
-
       // disable the run button
       e.target.disabled = true;
       codeBlock.contentEditable = true;
@@ -90,6 +85,11 @@ $(document).ready(function () {
       runCode.onclick = async (e) => {
         e.preventDefault();
         pre.firstChild.innerHTML = 'Loading...';
+        pre.removeAttribute('data-highlighted');
+        pre.classList.remove('hljs');
+        pre.classList.remove('language-python');
+        pre.classList.remove('language-zsh');
+
         runCode.disabled = true;
         let pyodide = await loadPyodide();
         await pyodide.loadPackage("micropip");
