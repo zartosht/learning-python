@@ -8,15 +8,19 @@
         paths: { 'vs': 'https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs' }
       });
       require(['vs/editor/editor.main'], function () {
-        const editor = document.querySelector('pre > code');
-        editor.setAttribute('style', 'height: 100%;');
-        monaco.editor.create(editor, {
-          value: editor.textContent,
+        const codeContainer = document.querySelector('pre > code');
+        // codeContainer.setAttribute('style');
+        const editor = monaco.editor.create(codeContainer, {
+          value: codeContainer.textContent,
           language: 'python',
           automaticLayout: true,
           theme: 'vs-dark'
         });
+
         editor.layout();
+        // // B. The editor does not need to scan the container, 
+        // // avoiding a forced layout
+        // codeContainer.layout({ width: w, height: h });
       });
     };
 
