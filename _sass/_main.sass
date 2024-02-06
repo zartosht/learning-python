@@ -3,6 +3,13 @@
   padding: 0
   box-sizing: border-box
 
+[contenteditable]
+  outline: none
+
+  &:focus
+    output: none
+    border: none
+
 body, button, input, select, optgroup, textarea, li
   font-family: 'Roboto', sans-serif
   font-size: 16px
