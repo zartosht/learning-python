@@ -74,7 +74,7 @@ $(document).ready(function () {
 
       // disable the run button
       e.target.disabled = true;
-      codeBlock.parentElement.contentEditable = true;
+      codeBlock.contentEditable = true;
 
       runCode.onclick = async (e) => {
         e.preventDefault();
