@@ -70,9 +70,18 @@ $(document).ready(function () {
       } else {
         pre = codeBlock.parentNode.parentNode.parentNode.querySelector('.output');
         runCode = codeBlock.parentNode.parentNode.parentNode.querySelector('.run-code');
+
+        pre.innerHTML = ''; 
+        const code = document.createElement('code');
+        pre.appendChild(code);
       }
 
       if (!runCode || !pre) return;
+
+      pre.removeAttribute('data-highlighted');
+      pre.classList.remove('hljs');
+      pre.classList.remove('language-python');
+      pre.classList.remove('language-zsh');
 
       // disable the run button
       e.target.disabled = true;
