@@ -9,6 +9,7 @@
       });
       require(['vs/editor/editor.main'], function () {
         const editor = document.querySelector('pre > code');
+        editor.setAttribute('style', 'height: 100%');
         monaco.editor.create(editor, {
           value: editor.textContent,
           language: 'python'
