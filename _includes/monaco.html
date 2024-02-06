@@ -12,7 +12,14 @@
 
         codeContainers.forEach((codeContainer) => {
           const pre = codeContainer.parentElement;
-          const editor = monaco.editor.create(codeContainer, {
+
+          const monacoContainer = document.createElement('div');
+          monacoContainer.style.width = '100%';
+          monacoContainer.style.height = '100%';
+          // Insert the new container after the pre
+          pre.parentElement.insertBefore(monacoContainer, pre.nextSibling);
+
+          const editor = monaco.editor.create(monacoContainer, {
             value: codeContainer.textContent,
             language: 'python',
             theme: 'vs-dark'
