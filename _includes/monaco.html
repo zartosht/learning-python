@@ -22,7 +22,7 @@
           monacoEditor.setAttribute('style', `width: 100%; height: 100%;`);
 
           const monacoResizeBar = document.createElement('div');
-          monacoResizeBar.setAttribute('style', `position: absolute; width: 100%; height: 3px; background-color: #f1f1f1; cursor: row-resize; bottom: 0; left: 0;`);
+          monacoResizeBar.setAttribute('style', `position: relative; width: 100px; height: 3px; background-color: #f1f1f1; cursor: row-resize; bottom: 2px; margin: 0 auto; border-radius: 1rem;`);
 
           monacoContainer.appendChild(monacoEditor);
           monacoContainer.appendChild(monacoResizeBar);
@@ -43,6 +43,39 @@
           // The editor is ready to be used
           // Hide the original code
           pre.style.display = 'none';
+
+          let isResizing = false;
+          // Listen for mousedown on the resize handle
+          monacoResizeBar.addEventListener('mousedown', function (e) {
+            isResizing = true;
+            document.addEventListener('mousemove', handleMouseMove);
+            document.addEventListener('mouseup', stopResize);
+            e.preventDefault();
+          });
+
+          // Handle the mouse move event
+          function handleMouseMove(e) {
+            if (!isResizing) {
+              return;
+            }
+            // Calculate the new size of the editor container
+            var newHeight = e.clientY - monacoContainer.getBoundingClientRect().top;
+            var newWidth = e.clientX - monacoContainer.getBoundingClientRect().left;
+
+            // Apply the new size to the editor container
+            monacoContainer.style.height = newHeight + 'px';
+            monacoContainer.style.width = newWidth + 'px';
+
+            // Tell the editor to re-layout itself
+            editor.layout({ width: newWidth, height: newHeight });
+          }
+
+          // Stop resizing
+          function stopResize(e) {
+            isResizing = false;
+            document.removeEventListener('mousemove', handleMouseMove);
+            document.removeEventListener('mouseup', stopResize);
+          }
         });
       });
     };
