@@ -12,9 +12,11 @@
 
         codeContainers.forEach((codeContainer) => {
           const pre = codeContainer.parentElement;
+          const width = pre.offsetWidth;
+          const height = pre.offsetHeight;
 
           const monacoContainer = document.createElement('div');
-          monacoContainer.setAttribute('style', `position: relative; width: 100%; height: 400px;`);
+          monacoContainer.setAttribute('style', `position: relative; width: 100%; height: ${height}px;`);
 
           const monacoEditor = document.createElement('div');
           monacoEditor.setAttribute('style', `width: 100%; height: 100%;`);
@@ -35,9 +37,7 @@
             fontSize: 16,
           });
 
-          // Set the editor size to the pre size
-          const width = pre.offsetWidth;
-          const height = pre.offsetHeight;
+          // Set the editor layout to the pre size
           editor.layout({ width, height: height + 2 });
 
           // The editor is ready to be used
