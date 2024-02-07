@@ -93,7 +93,7 @@
             document.removeEventListener('mouseup', stopResize);
           }
 
-          editors.push(editor);
+          editors.push({ editor, monacoContainer });
         });
       });
     };
