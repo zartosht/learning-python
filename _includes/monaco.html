@@ -1,4 +1,5 @@
 <script>
+  let editors = [];
   $(document).ready(function () {
     const loaderjs = document.createElement('script');
     loaderjs.src = '/assets/js/loader.js';
@@ -16,7 +17,7 @@
           const height = pre.offsetHeight;
 
           const monacoContainer = document.createElement('div');
-          monacoContainer.setAttribute('style', `position: relative; width: 100%; height: ${height}px; padding 5px 0; margin: 10px 0;`);
+          monacoContainer.setAttribute('style', `position: relative; width: 100%; height: ${height}px; padding 5px 0; margin: 10px 0; display: flex; ite`);
 
           const monacoEditor = document.createElement('div');
           monacoEditor.setAttribute('style', `width: 100%; height: 100%;`);
@@ -36,8 +37,6 @@
             theme: 'vs-dark',
             fontSize: 16,
           });
-
-          console.dir(editor, { depth: null });
 
           // Listen for changes in the editor content
           editor.onDidChangeModelContent((event) => {
@@ -93,6 +92,8 @@
             document.removeEventListener('mousemove', handleMouseMove);
             document.removeEventListener('mouseup', stopResize);
           }
+
+          editors.push(editor);
         });
       });
     };
