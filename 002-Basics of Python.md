@@ -1,5 +1,6 @@
 ---
 title: Basics of Python
+comments: true
 permalink: 002-Basics-of-Python
 ---
 

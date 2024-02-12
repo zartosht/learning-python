@@ -1,5 +1,6 @@
 ---
 title: Control Structures in Python
+comments: true
 permalink: 003-Control-Structures
 ---
 

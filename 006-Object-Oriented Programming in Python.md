@@ -1,5 +1,6 @@
 ---
 title: Object-Oriented Programming in Python
+comments: true
 permalink: 006-Object-Oriented-Programming-in-Python
 ---
 

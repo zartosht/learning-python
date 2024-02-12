@@ -1,5 +1,6 @@
 ---
 title: Error and Exception Handling in Python
+comments: true
 permalink: 008-Error-and-Exception-Handling
 ---
 

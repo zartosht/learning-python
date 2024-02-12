@@ -12,6 +12,17 @@ $(document).ready(function () {
     $('html, body').animate({ scrollTop: 0 }, 400);
   });
 
+  // disqus add #disqus_thread to the end of the url
+  const internalLinks = document.querySelectorAll('a[href^="0"]');
+  internalLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const href = link.getAttribute('href');
+      if (!href.includes('#disqus_thread')) {
+        link.setAttribute('href', href + '#disqus_thread');
+      }
+    });
+  });
+
 
   // document.querySelectorAll('pre > code').forEach((codeBlock) => {
   //   const buttonsContainer = document.createElement('div');

@@ -1,5 +1,6 @@
 ---
 title: Advanced Topics in Python
+comments: true
 permalink: 010-Advanced-Topics
 ---
 

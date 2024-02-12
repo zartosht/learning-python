@@ -1,5 +1,6 @@
 ---
 title: Introduction to Python
+comments: true
 permalink: 001-Introduction-to-Python
 ---
 

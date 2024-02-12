@@ -1,5 +1,6 @@
 ---
 title: Working with Files in Python
+comments: true
 permalink: 007-Working-with-Files
 ---
 

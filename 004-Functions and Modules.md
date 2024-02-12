@@ -1,5 +1,6 @@
 ---
 title: Functions and Modules in Python
+comments: true
 permalink: 004-Functions-and-Modules
 ---
 

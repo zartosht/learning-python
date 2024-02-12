@@ -1,5 +1,6 @@
 ---
 title: Data Structures in Python
+comments: true
 permalink: 005-Data-Structures
 ---
 
